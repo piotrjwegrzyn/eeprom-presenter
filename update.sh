@@ -1,8 +1,7 @@
-#!/usr/bin/bash
+#!/bin/sh
 
 ITERATIONS=299
 SLEEP_TIME=0.5
-FIN_DIR=$HOME/.eeprom-presenter/
 START_DIR=$(pwd)
 
 cd $FIN_DIR

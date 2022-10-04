@@ -1,7 +1,6 @@
-#!/usr/bin/bash
+#!/bin/sh
 
-rm -rf interfaces
-mkdir -p interfaces
+mkdir interfaces
 
 for interface in $(find eeproms/* -type d | sed 's/eeproms\///')
 do
@@ -12,12 +11,4 @@ do
     fi
 done
 
-FIN_DIR=$HOME/.eeprom-presenter
-
-mkdir -p $FIN_DIR
-
-mv eeproms $FIN_DIR/eeproms
-mv interfaces $FIN_DIR/interfaces
-mv present.sh update.sh $FIN_DIR/
-
-echo "alias show-eeprom=$FIN_DIR/present.sh" >> $HOME/.bashrc
+# echo "alias show-eeprom=present.sh" >> $HOME/.bashrc

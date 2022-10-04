@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/bin/sh
 
 if [ $# -ne 1 ];
 then
@@ -11,8 +11,8 @@ then
     exit 1
 fi
 
-xxd -p -c 16 $HOME/.eeprom-presenter/interfaces/$1 2> /dev/null
+xxd -p -c 16 $FIN_DIR/interfaces/$1 2> /dev/null
 # Alternatively:
-# xxd $HOME/.eeprom-presenter/interfaces/$1
-# hexdump -v -C $HOME/.eeprom-presenter/interfaces/$1
-# hexdump -v $HOME/.eeprom-presenter/interfaces/$1
+# xxd $FIN_DIR/interfaces/$1
+# hexdump -v -C $FIN_DIR/interfaces/$1
+# hexdump -v $FIN_DIR/interfaces/$1
