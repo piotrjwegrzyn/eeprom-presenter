@@ -11,8 +11,8 @@ then
     exit 1
 fi
 
-xxd -p -c 16 interfaces/$1 2> /dev/null
+xxd -p -c 16 $HOME/.eeprom-presenter/interfaces/$1 2> /dev/null
 # Alternatively:
-# xxd interfaces/$1
-# hexdump -v -C interfaces/$1
-# hexdump -v interfaces/$1
+# xxd $HOME/.eeprom-presenter/interfaces/$1
+# hexdump -v -C $HOME/.eeprom-presenter/interfaces/$1
+# hexdump -v $HOME/.eeprom-presenter/interfaces/$1

@@ -2,7 +2,10 @@
 
 ITERATIONS=299
 SLEEP_TIME=0.5
+FIN_DIR=$HOME/.eeprom-presenter/
+START_DIR=$(pwd)
 
+cd $FIN_DIR
 
 for iteration in $(seq 1 $ITERATIONS);
 do
@@ -16,3 +19,5 @@ do
     done
     sleep $SLEEP_TIME
 done
+
+cd $START_DIR
