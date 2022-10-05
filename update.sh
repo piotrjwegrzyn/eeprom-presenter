@@ -1,22 +1,14 @@
 #!/bin/sh
 
-ITERATIONS=299
-SLEEP_TIME=0.5
-START_DIR=$(pwd)
-
-cd $FIN_DIR
-
 for iteration in $(seq 1 $ITERATIONS);
 do
-    for interface in $(find eeproms/* -type d | sed 's/eeproms\///')
+    for interface in $(find $FIN_DIR/eeproms/* -type d | sed 's/\/.*\///')
     do
-        file=$(printf eeproms/$interface/$interface-%09d $iteration)
+        file=$(printf $FIN_DIR/eeproms/$interface/$interface-%09d $iteration)
         if test -f "$file";
         then
-            ln -sf ../$file interfaces/$interface
+            ln -sf $file $FIN_DIR/interfaces/$interface
         fi
     done
     sleep $SLEEP_TIME
 done
-
-cd $START_DIR

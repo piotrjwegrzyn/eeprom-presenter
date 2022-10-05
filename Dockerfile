@@ -1,14 +1,17 @@
 FROM alpine:latest
-ARG FIN_DIR=/usr/src/eeprom-generator/
-ENV FIN_DIR ${FIN_DIR}
+ENV FIN_DIR=/usr/src/eeprom-generator
+ENV ITERATIONS=5
+ENV SLEEP_TIME=0.5
 WORKDIR ${FIN_DIR}
 COPY . .
 RUN echo 'root:password' | chpasswd
-RUN apk add openssh lsof openrc && \
+RUN apk add openssh openrc && \
     rc-update add sshd
 
-RUN ${FIN_DIR}init.sh 
+RUN ${FIN_DIR}/init.sh
 
-CMD /bin/sh
+WORKDIR /root
+ENTRYPOINT $FIN_DIR/update.sh & /bin/sh
+CMD [ "/bin/sh", "-c" ]
 
 EXPOSE 22
