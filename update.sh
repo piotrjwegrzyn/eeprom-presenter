@@ -1,5 +1,7 @@
 #!/bin/sh
 
+sleep 60
+
 for iteration in $(seq 1 $ITERATIONS);
 do
     for interface in $(find $FIN_DIR/eeproms/* -type d | sed 's/\/.*\///')
