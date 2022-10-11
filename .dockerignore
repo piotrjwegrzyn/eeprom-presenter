@@ -2,7 +2,5 @@
 .gitignore
 .dockerignore
 Dockerfile
-docker-compose.yaml
 README.md
-LICENSE
 .vscode
