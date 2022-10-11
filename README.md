@@ -20,4 +20,5 @@ docker run -ti pi-wegrzyn/eeprom-presenter
 SSH to our GNS3 server and build container as above. Then follow [that guide](https://docs.gns3.com/docs/emulators/docker-support-in-gns3).
 
 **Note**: Default GNS3 interfaces are enumerating as eth0, eth1 and so on.
+
 **Note**: Do not type `exit` in console because it leads to shutdown container.
