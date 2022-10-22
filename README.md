@@ -22,3 +22,6 @@ SSH to our GNS3 server and build container as above. Then follow [that guide](ht
 **Note**: Default GNS3 interfaces are enumerating as eth0, eth1 and so on.
 
 **Note**: Do not type `exit` in console because it leads to shutdown container.
+
+## License
+All software is under GNU GPL version 3.
