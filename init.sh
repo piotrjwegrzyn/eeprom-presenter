@@ -12,3 +12,5 @@ do
 done
 
 ln -s $FIN_DIR/present.sh /usr/bin/show-eeprom
+echo "ls --color=never $FIN_DIR/interfaces/ | grep ." > /usr/bin/show-fiber-interfaces
+chmod +x /usr/bin/show-fiber-interfaces
