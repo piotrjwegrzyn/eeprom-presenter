@@ -1,8 +1,8 @@
 # eeprom-presenter
-Simple container with command to show EEPROM on interface
+Simple container with commands to list optical interfaces and show EEPROM on them.
 
 ## How to build on any Linux
-Prepare EEPROM files for interfaces and move them to `eeproms` (remove default `eth1` folder before).
+Prepare EEPROM files for interfaces and move them to `eeproms` (remove default `eth0` folder before).
 
 **Note**: folders' names in `eeproms` directory should reflect network interfaces' names (what is not cover here).
 
@@ -14,6 +14,15 @@ docker build -t pi-wegrzyn/eeprom-presenter:latest .
 ## How to run on any Linux
 ```
 docker run -ti pi-wegrzyn/eeprom-presenter
+```
+
+## Usage
+```
+# Show optic ports:
+show-fiber-interfaces
+
+# Show EEPROM on interface:
+show-eeprom <IFACE>
 ```
 
 ## How to run in GNS3's project

@@ -3,4 +3,5 @@
 .dockerignore
 Dockerfile
 README.md
+LICENSE
 .vscode
