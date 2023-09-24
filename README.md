@@ -1,3 +1,6 @@
+# ⚠️ DEPRECATION NOTICE ⚠️
+This project has been merged into [EMS repository](https://github.com/piotrjwegrzyn/eeprom-monitoring-server).
+
 # eeprom-presenter
 Simple container with commands to list optical interfaces and show EEPROM on them.
 
